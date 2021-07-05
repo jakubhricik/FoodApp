@@ -9,14 +9,7 @@ import {
   FlatList,
 } from "react-native";
 
-import {
-  dummyData,
-  images,
-  icons,
-  FONTS,
-  SIZES,
-  COLORS,
-} from "../../constants";
+import { dummyData, images, icons, SIZES, COLORS } from "../../constants";
 
 import { CategoryCard, TrendingCard } from "../../components";
 
