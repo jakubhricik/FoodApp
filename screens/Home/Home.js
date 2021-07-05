@@ -18,7 +18,7 @@ import {
   COLORS,
 } from "../../constants";
 
-import { CategoryCard } from "../../components";
+import { CategoryCard, TrendingCard } from "../../components";
 
 import { generalStyles, headerStyles } from "./styles";
 
@@ -77,6 +77,43 @@ const Home = ({ navigation }) => {
       </View>
     );
   }
+
+  function renderTrendingSection() {
+    return (
+      <View style={headerStyles.trendingContainer}>
+        <Text style={headerStyles.trendingTitle}>Trending Recipe</Text>
+        <FlatList
+          data={dummyData.trendingRecipes}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => `${item.id}`}
+          renderItem={({ item, index }) => {
+            return (
+              <TrendingCard
+                containerStyle={{ marginLeft: index == 0 ? SIZES.padding : 0 }}
+                recipeItem={item}
+                onPress={() => navigation.navigate("Recipe", { recipe: item })}
+              />
+            );
+          }}
+        />
+      </View>
+    );
+  }
+
+  function renderCategoryHeader() {
+    return (
+      <View style={headerStyles.categoryHeaderContainer}>
+        {/* Section Title */}
+        <Text style={headerStyles.categoryHeaderTitle}>Category</Text>
+        {/* View all Button */}
+        <TouchableOpacity>
+          <Text style={headerStyles.categoryHeaderViewAllButton}>View All</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView style={generalStyles.container}>
       <FlatList
@@ -96,8 +133,10 @@ const Home = ({ navigation }) => {
             {renderSeeRecipeCard()}
 
             {/* Trending Section */}
+            {renderTrendingSection()}
 
             {/* Category Header */}
+            {renderCategoryHeader()}
           </View>
         }
         renderItem={({ item }) => {

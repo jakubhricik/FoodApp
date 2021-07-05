@@ -79,4 +79,29 @@ export default StyleSheet.create({
     textDecorationLine: "underline",
     ...FONTS.h4,
   },
+
+  // trending section
+  trendingContainer: {
+    marginTop: SIZES.padding,
+  },
+  trendingTitle: {
+    marginHorizontal: SIZES.padding,
+    ...FONTS.h2,
+  },
+
+  // category header
+  categoryHeaderContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 20,
+    marginHorizontal: SIZES.padding,
+  },
+  categoryHeaderTitle: {
+    flex: 1,
+    ...FONTS.h2,
+  },
+  categoryHeaderViewAllButton: {
+    color: COLORS.gray,
+    ...FONTS.body4,
+  },
 });
