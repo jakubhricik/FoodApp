@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ImageBackground,
-  StatusBar,
-  StyleSheet,
-} from "react-native";
+import { View, Text, ImageBackground, StatusBar } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-import { images, COLORS, SIZES, FONTS } from "../constants";
-import { CustomButton } from "../components";
+import { images, COLORS, SIZES, FONTS } from "../../constants";
+import { generalStyles, headerStyles, detailsStyles } from "./styles";
+import { CustomButton } from "../../components";
 
 const Login = ({ navigation }) => {
   function renderHeader() {
@@ -89,48 +83,3 @@ const Login = ({ navigation }) => {
 };
 
 export default Login;
-
-const generalStyles = StyleSheet.create({
-  container: {
-    backgroundColor: COLORS.black,
-    flex: 1,
-  },
-});
-
-const headerStyles = StyleSheet.create({
-  container: {
-    height: SIZES.height > 700 ? "65%" : "60%",
-  },
-  image: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
-  gradient: {
-    height: 200,
-    justifyContent: "flex-end",
-    paddingHorizontal: SIZES.padding,
-  },
-  title: {
-    color: COLORS.white,
-    width: "80%",
-    lineHeight: 45,
-    ...FONTS.largeTitle,
-  },
-});
-
-const detailsStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: SIZES.padding,
-  },
-  description: {
-    marginTop: SIZES.radius,
-    color: COLORS.gray,
-    width: "70%",
-    ...FONTS.body3,
-  },
-  buttonsContainer: {
-    flex: 1,
-    justifyContent: "center",
-  },
-});

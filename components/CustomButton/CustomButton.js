@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-import { COLORS, FONTS } from "../constants";
+import styles from "./CustomButton.style.js";
 
 const CustomButton = ({
   buttonText,
@@ -34,19 +34,3 @@ const CustomButton = ({
 };
 
 export default CustomButton;
-
-const styles = StyleSheet.create({
-  buttonText: {
-    textAlign: "center",
-    color: COLORS.white,
-    ...FONTS.h3,
-  },
-  buttonColoredText: {
-    textAlign: "center",
-    color: COLORS.lightGreen,
-    ...FONTS.h3,
-  },
-  button: {
-    backgroundColor: COLORS.white,
-  },
-});

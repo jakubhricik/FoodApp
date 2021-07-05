@@ -1,4 +1,4 @@
-import CustomButton from "./CustomButton";
-import TabIcon from "./TabIcon";
+import CustomButton from "./CustomButton/CustomButton";
+import TabIcon from "./TabIcon/TabIcon";
 
 export { CustomButton, TabIcon };
