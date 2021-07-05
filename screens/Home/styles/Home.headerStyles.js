@@ -41,7 +41,42 @@ export default StyleSheet.create({
     color: COLORS.gray,
   },
   searchTextInput: {
+    flex: 1,
     marginLeft: SIZES.radius,
     ...FONTS.body3,
+  },
+
+  //see recipe card styles
+  seeRecipesContainer: {
+    flexDirection: "row",
+    marginTop: SIZES.padding,
+    marginHorizontal: SIZES.padding,
+    borderRadius: 10,
+    backgroundColor: COLORS.lightGreen,
+  },
+  seeRecipesImageContainer: {
+    width: 100,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  seeRecipesImage: {
+    width: 80,
+    height: 80,
+  },
+  seeRecipesTextContainer: {
+    flex: 1,
+    paddingVertical: SIZES.radius,
+  },
+  seeRecipesText: {
+    width: "70%",
+    ...FONTS.body4,
+  },
+  seeRecipesLinkContainer: {
+    marginTop: 10,
+  },
+  seeRecipesLink: {
+    color: COLORS.darkGreen,
+    textDecorationLine: "underline",
+    ...FONTS.h4,
   },
 });

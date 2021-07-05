@@ -53,6 +53,30 @@ const Home = ({ navigation }) => {
       </View>
     );
   }
+
+  function renderSeeRecipeCard() {
+    return (
+      <View style={headerStyles.seeRecipesContainer}>
+        {/* Image */}
+        <View style={headerStyles.seeRecipesImageContainer}>
+          <Image source={images.recipe} style={headerStyles.seeRecipesImage} />
+        </View>
+
+        {/* Text */}
+        <View style={headerStyles.seeRecipesTextContainer}>
+          <Text style={headerStyles.seeRecipesText}>
+            You have 12 recipes that you haven't try yet
+          </Text>
+          <TouchableOpacity
+            style={headerStyles.seeRecipesLinkContainer}
+            onPress={() => console.log("See Recipes...")}
+          >
+            <Text style={headerStyles.seeRecipesLink}>See Recipes</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
   return (
     <SafeAreaView style={generalStyles.container}>
       <FlatList
@@ -69,6 +93,7 @@ const Home = ({ navigation }) => {
             {renderSearchBar()}
 
             {/* See Recipe Card */}
+            {renderSeeRecipeCard()}
 
             {/* Trending Section */}
 
