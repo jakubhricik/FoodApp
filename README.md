@@ -1,6 +1,6 @@
 # FoodApp
 
-App made by React Native.  
+App made using React Native.  
 I started to made this app to learn some new concepts of ReactNative and Javascript
 
 ---
